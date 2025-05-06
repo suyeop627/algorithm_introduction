@@ -8,7 +8,7 @@ import java.util.Scanner;
  * 문자열은 알파벳으로만 구성
  */
 public class SolutionWithLecture {
-    private static String solution(String str) {
+    private static String solution1(String str) {
         String answer = "";
         int m = Integer.MIN_VALUE;
         String[] s = str.split(" ");
@@ -21,13 +21,32 @@ public class SolutionWithLecture {
         }
         return answer;
     }
+    private static String solution2(String str) {
+        String answer = "";
+        int m = Integer.MIN_VALUE, pos;
+
+        while ((pos = str.indexOf(' ')) != -1) {
+            String tmp = str.substring(0, pos);
+            int len = tmp.length();
+            if (len > m) {
+                m = len;
+                answer = tmp;
+            }
+            str = str.substring(pos+1);
+        }
+
+        if(str.length() > m) answer = str;
+
+        return answer;
+    }
 
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
 
-        System.out.println(solution(str));
+        System.out.println(solution1(str));
+        System.out.println(solution2(str));
     }
 }
 

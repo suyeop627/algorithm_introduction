@@ -9,7 +9,7 @@ import java.util.Scanner;
  * 긴 단어가 여러개일 경우 가장 앞에 있는 단어 출력
  */
 public class MySolution {
-    private static String solution1(String str) {
+    private static String solution(String str) {
         String[] strArray = str.split(" ");
         int maxLength = 0;
         int index = 0;
@@ -22,32 +22,11 @@ public class MySolution {
         return strArray[index];
     }
 
-    private static String solution2(String str) {
-        String answer = "";
-        int m = Integer.MIN_VALUE, pos;
-
-        while ((pos = str.indexOf(' ')) != -1) {
-            String tmp = str.substring(0, pos);
-            int len = tmp.length();
-            if (len > m) {
-                m = len;
-                answer = tmp;
-            }
-            str = str.substring(pos+1);
-        }
-
-        if(str.length() > m) answer = str;
-
-        return answer;
-    }
-
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
 
-        System.out.println(solution1(str));
-        System.out.println(solution2(str));
+        System.out.println(solution(str));
     }
 }
 
