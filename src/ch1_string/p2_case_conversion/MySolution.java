@@ -1,8 +1,9 @@
 package ch1_string.p2_case_conversion;
 
 import java.util.Scanner;
+
 /*
- * 1. 대소문자 변환
+ * 2. 대소문자 변환
  * 대문자와 소문자가 함께 있는 문자열을 입력받아, 대문자는 소문자로, 소문자는 대문자로 변환하는 프로그램 작성
  * 문자열은 알파벳으로만 구성
  */

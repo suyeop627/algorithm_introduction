@@ -3,7 +3,7 @@ package ch1_string.p3_words_in_a_sentence;
 import java.util.Scanner;
 
 /*
- * 1. 대소문자 변환
+ * 3. 대소문자 변환
  * 대문자와 소문자가 함께 있는 문자열을 입력받아, 대문자는 소문자로, 소문자는 대문자로 변환하는 프로그램 작성
  * 문자열은 알파벳으로만 구성
  */
@@ -21,6 +21,7 @@ public class SolutionWithLecture {
         }
         return answer;
     }
+
     private static String solution2(String str) {
         String answer = "";
         int m = Integer.MIN_VALUE, pos;
@@ -32,10 +33,10 @@ public class SolutionWithLecture {
                 m = len;
                 answer = tmp;
             }
-            str = str.substring(pos+1);
+            str = str.substring(pos + 1);
         }
 
-        if(str.length() > m) answer = str;
+        if (str.length() > m) answer = str;
 
         return answer;
     }

@@ -3,7 +3,7 @@ package ch1_string.p3_words_in_a_sentence;
 import java.util.Scanner;
 
 /*
- * 1. 문장 속 단어
+ * 3. 문장 속 단어
  * 하나의 문장 속에서 가장 긴 단어를 찾는 프로그램 작성
  * 단어는 공백으로 구분됨
  * 긴 단어가 여러개일 경우 가장 앞에 있는 단어 출력
